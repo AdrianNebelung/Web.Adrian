@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: #f5f5f5;
+    color: #333;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+#global-header {
+    background: url("https://unblast.com/wp-content/uploads/2021/01/Space-Background-Images.jpg") no-repeat center center;
+    background-size: cover; 
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;  
+    color: black;
+}
+
+#mainlogo {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+
+nav {
+    background: white;
+    border: 1px silid #ccc;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+nav li a {
+    display: block;
+    padding: 1rem;
+    font-weight: bold;
+    list-style-type: none;
+    font-size: 1rem;
+}
+
+li {
+    font-size: 1rem;
+}
+
+.kontakt {
+    font-size: 2drem;
+}
+
+nav li a:hover {
+    background: #eee;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    padding: 1rem
+}
+
+article {
+    border: 1px solid black;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: white; 
+}
+
+aside {
+    padding: 1rem;
+    background: #e6f0ff;
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 1rem;
+}
+
+footer input, footer textarea {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 0.25rem;
+    border: none;
+    border-radius: 4px;
+}
+
+footer button{
+    margin-top: 0.5rem
+}
+
+.btn {
+    display: inline-block;
+    background: #004080;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #00264d;
+}
+
+.google-btn {
+   display: inline-block;
+    background: #004080;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.google-btn:hover {
+    background: #f0f0f0;
+}

@@ -1,0 +1,50 @@
+<!--Nå har jeg lagt inn !DOCTYPE html sånn at Visual studio code og nettleseren skjønner at dette er en html fil-->
+<!DOCTYPE html> 
+<!--Her har jeg endret sånn at html filen vet hvilket språk vi skal skrive-->
+<html lang = "en">
+<!--Jeg flyttet head før body, for head kommer før body. Hadde vært rart hvis man hadde hodet inni kroppen-->
+    <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <!--Jeg har lagt til en " etter style.css-->
+            <link rel="stylesheet" type="text/css" href="style.css">
+            <title>webutvikling eksamen</title>
+    </head>
+    <body>
+        <nav>
+            <!--Lister kan ikke være child element i nav, så har fjernet listene-->
+            <h1>Logo</h1>
+                <a href="#">Boatswain schooner</a>
+                <a href="#">Account lookout</a>
+                <a href="#">Sail ho shrouds</a>
+        </nav>
+        <!--Alle heading under her var feil, bare h1 kan være hovedskriften. Jeg har endre alle headings sånn at det ble riktig-->
+        <header>
+            <h2>Yar Pirate Ipsum</h2>
+            <p>Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl.</p>
+            <a class="button">Les mer</a>
+        </header>
+        <div id="main">
+            <!--Her manglet det en closing på article som gjorde at div også ble feil-->
+            <article>
+                <h3>Prow scuttle</h3>
+                <p>Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors.</p>
+                <a href="#">Les mer</a>
+            </article>
+            <article>
+                <h4>Jack Tar transom</h4>
+                <p>Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors.</p>
+                <a href="#">Les mer</a>
+            </article>
+            <article>
+                <h5>Trysail Sail</h5>
+                <p>Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors.</p>
+                <a href="#">Les mer</a>
+            </article>
+        </div>
+        <footer>
+            <span>Twitter</span>
+            <span>Facebook</span>
+            <span>Instagram</span>
+        </footer>
+    </body>
+</html>

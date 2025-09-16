@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labøvelseoppgave - CSS</title>
+    <link rel="stylesheet" href="nettsider.css">
+</head>
+<body>
+    <header id="global-header">
+        <h1 id="mainlogo">Min Nettside</h1>
+        <nav>
+            <ul>
+                <li><a href="nettside.html">Hjem</a></li>
+                <li><a href="mal.html">Nettside mal</a></li>
+                <li><a href="labøvelser.html">Labøvelse</a></li>
+                <li><a href="#kontakt">Kontakt oss</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <article>
+                <h2>Hvem er vi?</h2>
+                <p>Denne nettsiden skal hjelpe deg til å mestre programmeringsspråk. Vi går dypere inn forskjellige temaer innenfor HTML og CSS.Ved at du trykker på les mer så vi du finne mer innformasjon hvordan denne nettsiden fungerer.</p>
+                <a href="lesmer.html" class="btn">Les mer</a>
+            </article>
+            <article>
+                <h2>Google søk på Semantisk HTML</h2>
+                <p>Hvis du trykker på denne linken så vil du komme inn på Google, hvor Semantisk HTML er allerede søkt opp 🤠</div></p>
+                <a href="https://www.google.com/search?q=semantisk+html&client=opera-gx&hs=7WB&sca_esv=8fb985a9e177f272&biw=1110&bih=563&sxsrf=AE3TifPdPOWw9hJULAFRoEzzvvz3dBUqAg%3A1758012466178&ei=MiTJaPbLCom29u8P9qTz8QE&oq=seman&gs_lp=Egxnd3Mtd2l6LXNlcnAiBXNlbWFuKgIIADIKECMYgAQYJxiKBTIEECMYJzIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEC4YgAQyBRAuGIAESIEXUOcDWOkRcAR4AZABAJgBrQGgAfAHqgEDMC43uAEDyAEA-AEBmAILoAKuCKgCCsICChAAGLADGNYEGEfCAg0QABiABBiwAxhDGIoFwgINECMY8AUYJxjJAhjqAsICBxAjGCcY6gLCAhIQIxjwBRiABBgTGCcYyQIYigXCAhAQIxjwBRiABBgnGMkCGIoFwgIKEAAYgAQYQxiKBcICExAuGIAEGLEDGNEDGEMYxwEYigXCAhYQLhiABBixAxjRAxhDGIMBGMcBGIoFwgIIEAAYgAQYsQPCAgwQIxiABBgTGCcYigXCAgcQIxjwBRgnwgIQEAAYgAQYsQMYQxiDARiKBcICERAuGIAEGLEDGIMBGMcBGK8BwgIIEC4YgAQYsQPCAgsQLhiABBjRAxjHAcICERAuGIAEGLEDGNEDGIMBGMcBwgILEAAYgAQYsQMYgwHCAhAQLhiABBjRAxhDGMcBGIoFwgIMEAAYgAQYQxiKBRgKwgIKEC4YgAQYQxiKBcICDhAuGIAEGLEDGNEDGMcBwgIEEAAYA8ICDhAuGIAEGLEDGMcBGK8BmAMG8QVC4BFdifDO4YgGAZAGCpIHAzQuN6AHrGKyBwMwLje4B5oIwgcGMi0xMC4xyAc2&sclient=gws-wiz-serp" class="google-btn">Trykk her</a>
+    
+                </a>
+            </article>
+        </section>
+        <aide>
+            <h3>Øvningsmatriale</h3>
+            <p>Her er noen lenker ved øving til semantisk HTML:</p>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Semantics#semantics_in_html" traget="_blank">Semantics in HTML</a></li>
+                <li><a href="https://www.w3schools.com/html/html5_semantic_elements.asp" target="_blank">W3Schools Semantic Elements</a></li>
+                <li><a href="https://html.com/semantic-markup/" traget="_blank" alt="HTML Semantic Markup">HTML Semantic Markup</a></li>
+                <li><a href="https://www.freecodecamp.org/news/semantic-html5-elements/" target="_blank">FreeCodeCamp – Semantic HTML5</a></li>
+                <li><a href="https://web.dev/learn/html/semantic-html/" target="_blank">Google Web.dev – Semantic HTML</a></li>
+            </ul>
+        </aide>
+    </main>
+    
+    <footer id="kontakt">
+        <p class="kontakt">Kontakt oss</p>
+        <form action="mailto:acnebelu@hiof.no" method="POST" enctype="text/plain">
+            <label  for="navn">Navn:</label>
+            <input type="text" id="navn" name="navn" required>
+
+            <label for="email">Epost:</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="emne">Emne:</label>
+            <input type="text" id="emne" name="emne" required>
+
+            <label for="melding">Melding:</label>
+            <textarea id="melding" name="melding"></textarea>
+
+            <button type="submit" class="btn" a href="mailto:acnebelu@hiof.no">Send</button>
+        </form>
+
+        <p>&copy; 2025 Min Nettside</p>
+    </footer>
+</body>
+</html>
