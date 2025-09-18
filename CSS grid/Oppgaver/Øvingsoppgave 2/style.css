@@ -193,3 +193,7 @@ main section form{
     width: 100%;
     border-radius: 30px;
 }
+
+#global-header {
+    max-width: 100%;
+}
