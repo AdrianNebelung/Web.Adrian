@@ -36,13 +36,7 @@ body {
     }
 }
 
-#mainlogo{
-    font-size: 30px;;
-    font-weight: 900;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    color: #4d4a4a;
-}
+
 
 a {
     color: #00d1b2;
@@ -288,10 +282,9 @@ aside.aside-two {
     background: #285e61;
 }
 
-#cart {
+ #cart{
     max-width: 500px;
     margin: 0 auto;
-    background: #1b1b2f;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 6px 16px rgba(0,0,0,0.12);
