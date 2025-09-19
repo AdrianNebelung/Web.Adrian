@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheet.css">
-    <title>Forside - Dataspæll</title>
+    <link rel="stylesheet" href="">
+    <title>Podukter - Dataspæll</title>
+    <link rel = "stylesheet" href = "produkter.css">
 </head>
 <body>
     <header id="global-header">
@@ -27,8 +28,8 @@
     </section>
     <main>
         <section>
-            <h2>Populære Spæll</h2>
-            <article>
+            <h2>Produkter</h2>
+            <article id ="article-one">
                 <img src="https://image.api.playstation.com/cdn/UP1004/CUSA03041_00/Hpl5MtwQgOVF9vJqlfui6SDB5Jl4oBSq.png" alt ="Red Dead Redemption 2">
                 <h3>Red Dead Redemption 2</h3>
                 <p><em>Red Dead Redemption 2, det storslåtte, kritikerroste åpen-verden-spillet fra Rockstar Games, og ikke minst det høyest vurderte av alle spill for seneste generasjon med konsoller, er nå forbedret for PC med nytt Story Mode-innhold, visuelle oppgraderinger og mer.</em></p>
@@ -40,7 +41,7 @@
                 <h3>Call Of Duty: Black Ops 7</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
                 <p>kr 499,-</p>
-                <a href="product.html">Se produkt</a>
+                <a href="BO5.html">Se produkt</a>
             </article>
             <article id="article-three">
                 <img src="https://picsum.photos/id/237/200/300" alt ="Red Dead Redemption 2">
@@ -57,8 +58,93 @@
                 <a href="">Se produkt</a>
             </article>
         </section>
+        <section>
+        <div class ="pro">
+        <article class ="produkt">
+            <article class="RDR2">
+                <h3>Red Dead Redemption 2</h3>
+                <img src="https://image.api.playstation.com/cdn/UP1004/CUSA03041_00/Hpl5MtwQgOVF9vJqlfui6SDB5Jl4oBSq.png" alt ="Red Dead Redemption 2">
+                <p>kr 499,-</p>
+                <button onclick="addtoCart('Red Dead Redemtion 2', 499)">Legg til i handlevogn</button>
+            </article>
+         
+            <article class ="produkt">
+                <h3>Call Of Duty: Black Ops 5</h3>
+                <p>kr 499,-</p>
+                <button onclick="addtoCart('Call Of Duty: Black Ops 5', 499)">Legg til i handlevogn</button>
+            </article>
+        
+            <article class ="produkt">
+                <h3>Produkt</h3>
+                <p>kr 329,-</p>
+                <button onclick="addtoCart('Produkt', 329)">Legg til i handlevogn</button>
+            </article>
+        </div>
+
+        <div id="cart">
+            <h2>🛒 Din handlevogn</h2>
+            <ul id ="cart-items"></ul>
+            <p><strong>Total: <span id = "total">kr 0</span></strong></p>
+        </div>
+    </section>
+
+        <script>
+            let cart = [];
+            let total = 0;
+
+            function addtoCart(produkt, pris) {
+                cart.push({ produkt, pris});
+                total += pris;
+                renderCart();
+            }
+
+            function renderCart(){
+                const cartItems = document.getElementById('cart-items');
+                cartItems.innerHTML = '';
+                cart.forEach(item => {
+                        const li = document.createElement('li');
+                        li.innerHTML = `<span>${item.produkt}</span> <span>kr ${item.pris}</span>`;
+                        cartItems.appendChild(li);
+                });
+                document.getElementById('total').textContent = "kr " + total;
+            }
+
+
+            function removeFromCart(index) {
+        // subtract the item's price from total
+        total -= cart[index].pris;
+        // remove the item from the array
+        cart.splice(index, 1);
+        // re-render the cart
+        renderCart();
+    }
+
+    function renderCart() {
+        const cartItems = document.getElementById('cart-items');
+        cartItems.innerHTML = '';
+
+        cart.forEach((item, index) => {
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <span>${item.produkt}</span> 
+                <span>kr ${item.pris}</span> 
+                <button onclick="removeFromCart(${index})">❌</button>
+            `;
+            cartItems.appendChild(li);
+        });
+
+        document.getElementById('total').textContent = "kr " + total;
+    }
+
+    document.getElementById('total').textContent = 'kr ' + total;
+    </script>
+    
+    
+    <br>
+    <br>
+    <br>
         <section class="section-mid">
-            <h2>Kategorier</h2>
+            <h2 id ="katego">Kategorier</h2>
             <p>Her finner du forskjellige kategorier vi har innenfor gaming.</p>
             
             <article>
@@ -102,5 +188,7 @@
 
                 <input type="submit" value="Send">
     </aside>
+    <div id="notification"></div>
+
 </body>
 </html>

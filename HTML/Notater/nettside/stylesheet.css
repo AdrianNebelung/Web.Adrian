@@ -96,7 +96,7 @@ nav ul li a.btn {
 }
 
 main {
-    display: felx;
+    display: flex;
     flex-direction: column;
     gap: 2rem;
     padding: 2rem;
@@ -135,6 +135,9 @@ article p {
     margin-bottom: 0.5rem;
 }
 
+.article-two {
+    flex-wrap: wrap-reverse;
+}
 aside {
     background-color: #0f0f1f;
     padding: 2rem;
@@ -193,8 +196,10 @@ input [type="submit"] {
     height: 200px; 
 }
 .section-mid {
+      
     text-align: center;
     justify-items: center;
+    flex-wrap: nowrap;
 }
 
 .melding-box {
