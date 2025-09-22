@@ -36,27 +36,6 @@ body {
     }
 }
 
-image-logo {
-    padding: 30px;
-    margin: 30px;
-}
-
-#topbar {
-    display: flex;
-    justify-self: flex-end;
-    align-items: center;
-    padding: 12px 20px;
-    color: #00d1b2;
-    font-size: 15px;
-}
-
-#cart {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-}
 
 
 a {
@@ -78,12 +57,10 @@ a {
 
 article {
     margin: 1rem 0;
-    border: 1px solid #efefef;
-    max-width: 400px; 
+    border: 1px solid #efefef; 
     width: 100%;
     min-width: 250px;
     padding: 1rem;
-    text-align: center;
 
 
     img {
@@ -111,7 +88,6 @@ nav ul li a.btn {
 }
 
 main {
-    display: flex;
     flex-direction: column;
     gap: 2rem;
     padding: 2rem;
@@ -150,9 +126,6 @@ article p {
     margin-bottom: 0.5rem;
 }
 
-.article-two {
-    flex-wrap: wrap-reverse;
-}
 aside {
     background-color: #0f0f1f;
     padding: 2rem;
@@ -200,21 +173,14 @@ input [type="submit"] {
             flex: 1 1 45%;
         }
         aside {
-            position: fixed
-            right: 2rem;
+            position: center;
             top: 10rem;
-        }
+        }   
     }
 
-.Black-Ops-7 {
-    width: 200px;
-    height: 200px; 
-}
 .section-mid {
-      
     text-align: center;
     justify-items: center;
-    flex-wrap: nowrap;
 }
 
 .melding-box {
@@ -248,4 +214,137 @@ aside.aside-two {
     justify-items: center;
 }
 
+article {
+        img {
+            width: 100%;
+        }
+}
+#section-top {
+  display: flex;
+  flex-wrap: wrap;       
+  gap: 20px;             
+}
+
+#section-top h2 {
+    flex-basis: 100%;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#section-top article {
+  flex: 0 1 calc(50% - 20px);  
+  box-sizing: border-box;      
+  border: 1px solid #1b1b2f;
+  padding: 15px;
+  background: #1b1b2f;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid  #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+/* Header flex layout */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #1b1b2f;
+  color: white;
+}
+
+/* Dropdown button */
+.dropbtn {
+  background-color: #1b1b2f;
+  color: #00d1b2;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Main dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f9f9f9;
+  min-width: 180px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+/* Submenu container */
+.dropdown-sub {
+  position: relative;
+}
+
+/* Submenu content */
+.sub-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: #f9f9f9;
+  min-width: 180px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+/* Show dropdowns with JS */
+.dropdown-content.show,
+.sub-menu.show {
+  display: block;
+}
+
+/* Links */
+.dropdown-content a,
+.sub-menu a,
+.sub-btn {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover,
+.sub-menu a:hover,
+.sub-btn:hover {
+  background-color: #f1f1f1;
+}
+
+/* Cart styling */
+#cart {
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+}
 

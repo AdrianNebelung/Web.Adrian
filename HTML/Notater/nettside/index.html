@@ -7,20 +7,31 @@
     <title>Forside - Dataspæll</title>
 </head>
 <body>
-    <header id="global-header">   
-        <nav>
-            <a href="index.html" id="hjem">Hjem</a>
-        </nav>  
-        <nav id ="cart-icon">
-            <a id = "cart">
-                🛒 Handlevogn:<span id ="cart-count"> 0</span>
-            </a>
-        </nav>
-        <nav>
-            <ul>
-                <a href="produkter.html" id="produkter">Produkter</a>
-            </ul>
-        </nav>
+            <div id = "page-container">
+            <header id="global-header">
+            <div class="header-container">
+
+            <div class="dropdown">
+            <button class="dropbtn">Meny ▾</button>
+            <div class="dropdown-content">
+            <a href="index.html">Hjem</a>
+
+            <div class="dropdown-sub">
+                <a href="#" class="sub-btn">Produkter ▸</a>
+            <div class="sub-menu">
+                <a href="action.html">Action</a>
+                <a href="nintendo.html">Nintendo</a>
+                <a href="rollespill.html">Rollespill</a>
+                <a href="fantasy.html">Fantasy</a>
+            </div>
+            </div>
+            </div>
+            </div>
+            <nav>
+                <a id="chart-icon">
+                    🛒 Handlevogn:<span id ="cart-count"> 0</span>
+                </a>
+            </nav>
     </header>
     <section class="deal-section">
         <h2>Crazy gaming deals</h2>
@@ -29,7 +40,7 @@
         <a href ="offers.html">Se tilbud</a> 
     </section>
     <main>
-        <section>
+        <section id = "section-top">
             <h2>Populære Spæll</h2>
             <article>
                 <img src="https://image.api.playstation.com/cdn/UP1004/CUSA03041_00/Hpl5MtwQgOVF9vJqlfui6SDB5Jl4oBSq.png" alt ="Red Dead Redemption 2">
@@ -60,6 +71,8 @@
                 <a href="">Se produkt</a>
             </article>
         </section>
+        <br>
+        <br>
         <section class="section-mid">
             <h2><a href="produkter.html"><u>Produkter</u></a></h2>
             <p>Her finner du hva slags spill vi selger. Trykk på produkter for å se våre spill.</p>
@@ -107,5 +120,33 @@
 
                 <input type="submit" value="Send">
     </aside>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const dropBtn = document.querySelector('.dropbtn');
+        const dropdownContent = document.querySelector('.dropdown-content');
+        const subBtn = document.querySelector('.sub-btn');
+        const subMenu = document.querySelector('.sub-menu');
+
+  // Toggle main dropdown
+        dropBtn.addEventListener('click', (e) => {
+        e.stopPropagation(); 
+        dropdownContent.classList.toggle('show');
+        });
+
+  // Toggle sub-menu
+        subBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        subMenu.classList.toggle('show');
+        });
+
+  // Close all dropdowns if clicking outside
+        window.addEventListener('click', () => {
+        dropdownContent.classList.remove('show');
+        subMenu.classList.remove('show');
+        });
+    });
+</script>
+
 </body>
 </html>
