@@ -392,6 +392,99 @@ th {
   text-decoration: none;
 }
 
+.cart-popup {
+    display: none;
+    position: absolute;
+    right: 0; /* align to the right edge of chart-container */
+    top: 35px; /* moved down so it appears below the handlekurv */
+    width: 300px;
+    max-height: 400px;
+    background-color: #1e1e1e;
+    color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    padding: 20px;
+    overflow-y: auto;
+    z-index: 1000;
+    font-family: 'Arial', sans-serif;
+}
+
+
+.cart-popup h3 {
+    margin-top: 0;
+    font-size: 18px;
+    border-bottom: 1px solid #555;
+    padding-bottom: 8px;
+}
+
+.cart-popup ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.cart-popup li {
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.cart-popup li button {
+    background-color: #ff4b5c;
+    color: #fff;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.cart-popup li button:hover {
+    background-color: #ff1f3b;
+}
+
+.cart-total {
+    border-top: 1px solid #555;
+    padding-top: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.cart-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.cart-actions button {
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+}
+
+#close-cart {
+    background-color: #555;
+    color: #fff;
+}
+
+#close-cart:hover {
+    background-color: #777;
+}
+
+#checkout-cart {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+#checkout-cart:hover {
+    background-color: #45a049;
+}
+
+
 #meld {
 font-size: 26px;
 color: #00d1b2;

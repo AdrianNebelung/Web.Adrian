@@ -35,6 +35,12 @@
                 <a id="chart-icon">
                     <span id="chart-vogn">🛒 Handlevogn:</span> <span id ="cart-count"> 0</span>
                 </a>
+                <div id="cart-popup" class="cart-popup">
+                <h3>Din handlekurv</h3>
+                <ul id ="cart-items"></ul>
+                <p><strong>Total:</strong> <span id="cart-total">0</span> kr</p> 
+                <button id ="close-cart">Lukk</button>
+            </div>
             </div>
     </header>
     <section class="deal-section">
@@ -52,6 +58,7 @@
                 <p><em>Red Dead Redemption 2, det storslåtte, kritikerroste åpen-verden-spillet fra Rockstar Games, og ikke minst det høyest vurderte av alle spill for seneste generasjon med konsoller, er nå forbedret for PC med nytt Story Mode-innhold, visuelle oppgraderinger og mer.</em></p>
                 <p>kr 499,-</p>
                 <a href="RDR2.html">Se produkt</a>
+                <button class="add-to-cart" data-name="Red Dead Redemtion 2" data-price="499">Legg til i handlekurven</button>
             </article>
             <article id="article-two">
                 <img src="https://upload.wikimedia.org/wikipedia/en/a/a3/Call_of_Duty_Black_Ops_7_Key_Art.png" alt ="Call Of Duty: Black Ops 7" class="Black-Ops-7">
@@ -59,6 +66,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
                 <p>kr 499,-</p>
                 <a href="product.html">Se produkt</a>
+                <button class="add-to-cart" data-name="Call Of Duty Balck Ops 7" data-price = "499">Legg til i handlekurven</button>
             </article>
             <article id="article-three">
                 <img src="https://picsum.photos/id/237/200/300" alt ="Red Dead Redemption 2">
@@ -135,30 +143,116 @@
     </footer>
     <script>
     document.addEventListener('DOMContentLoaded', () => {
-        const dropBtn = document.querySelector('.dropbtn');
-        const dropdownContent = document.querySelector('.dropdown-content');
-        const subBtn = document.querySelector('.sub-btn');
-        const subMenu = document.querySelector('.sub-menu');
+    // -----------------------------
+    // Meny-funksjoner
+    // -----------------------------
+    const dropBtn = document.querySelector('.dropbtn');
+    const dropdownContent = document.querySelector('.dropdown-content');
+    const subBtn = document.querySelector('.sub-btn');
+    const subMenu = document.querySelector('.sub-menu');
 
-  
-        dropBtn.addEventListener('click', (e) => {
+    dropBtn.addEventListener('click', (e) => {
         e.stopPropagation(); 
         dropdownContent.classList.toggle('show');
-        });
+    });
 
-  
-        subBtn.addEventListener('click', (e) => {
+    subBtn.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
         subMenu.classList.toggle('show');
-        });
+    });
 
-
-        window.addEventListener('click', () => {
+    window.addEventListener('click', () => {
         dropdownContent.classList.remove('show');
         subMenu.classList.remove('show');
+    });
+
+    // -----------------------------
+    // Handlekurv-funksjonalitet
+    // -----------------------------
+    let cartCount = 0;
+    let cart = [];
+    const cartCountElement = document.getElementById('cart-count');
+    const cartItemsElement = document.getElementById('cart-items');
+    const cartTotalElement = document.getElementById('cart-total');
+    const cartPopup = document.getElementById('cart-popup');
+    const cartIcon = document.getElementById('chart-icon');
+    const closeCartBtn = document.getElementById('close-cart');
+
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const name = button.dataset.name;
+            const price = parseInt(button.dataset.price);
+
+            cart.push({ name, price });
+            cartCount++;
+            cartCountElement.textContent = cartCount;
+
+            updateCart();
         });
     });
+
+    function updateCart() {
+        cartItemsElement.innerHTML = "";
+        let total = 0;
+
+        cart.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = `${item.name} - ${item.price} kr`;
+            cartItemsElement.appendChild(li);
+            total += item.price;
+        });
+
+        cartTotalElement.textContent = total;
+    }
+    function updateCart() {
+    cartItemsElement.innerHTML = "";
+    let total = 0;
+
+    cart.forEach((item, index) => {
+        const li = document.createElement('li');
+        li.textContent = `${item.name} - ${item.price} kr`;
+
+        // Lag en fjern-knapp
+        const removeBtn = document.createElement('button');
+        removeBtn.textContent = "Fjern";
+        removeBtn.style.marginLeft = "10px";
+        removeBtn.addEventListener('click', () => {
+            cart.splice(index, 1);  // fjern produktet fra array
+            cartCount--;             // reduser antallet
+            cartCountElement.textContent = cartCount;
+            updateCart();            // oppdater popup
+        });
+
+        li.appendChild(removeBtn);
+        cartItemsElement.appendChild(li);
+        total += item.price;
+    });
+
+    cartTotalElement.textContent = total;
+}
+
+
+    cartIcon.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const rect = cartIcon.getBoundingClientRect();
+        cartPopup.style.top = `${rect.bottom + 5}px`; // 5px space below
+        cartPopup.style.right = `${window.innerWidth - rect.right}px`;
+        cartPopup.style.display = cartPopup.style.display === "block" ? "none" : "block";
+    });
+
+    closeCartBtn.addEventListener('click', () => {
+        cartPopup.style.display = "none";
+    });
+
+    window.addEventListener('click', (e) => {
+        if (!cartPopup.contains(e.target) && e.target !== cartIcon) {
+            cartPopup.style.display = "none";
+        }
+    });
+});
 </script>
 
 </body>
