@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="nb">
 <head>
@@ -17,7 +18,7 @@
             <a href="index.html">Hjem</a>
 
             <div class="dropdown-sub">
-                <a href="#" class="sub-btn">Produkter ▸</a>
+                <a href class="sub-btn">Sjangere ▸</a>
             <div class="sub-menu">
                 <a href="action.html">Action</a>
                 <a href="nintendo.html">Nintendo</a>
@@ -27,11 +28,14 @@
             </div>
             </div>
             </div>
-            <nav>
+            <div id="produkter-container">
+                <a href="produkter.html" id="produk">Produkter</p>
+            </div>
+            <div id ="chart-container">
                 <a id="chart-icon">
-                    🛒 Handlevogn:<span id ="cart-count"> 0</span>
+                    <span id="chart-vogn">🛒 Handlevogn:</span> <span id ="cart-count"> 0</span>
                 </a>
-            </nav>
+            </div>
     </header>
     <section class="deal-section">
         <h2>Crazy gaming deals</h2>
@@ -74,9 +78,9 @@
         <br>
         <br>
         <section class="section-mid">
-            <h2><a href="produkter.html"><u>Produkter</u></a></h2>
+            <h2><a href="produkter.html">Produkter</a></h2>
             <p>Her finner du hva slags spill vi selger. Trykk på produkter for å se våre spill.</p>
-            <h2>Kategorier</h2>
+            <h2 id="sjangere">Sjangere</h2>
             <p>Her finner du forskjellige kategorier vi har innenfor gaming.</p>
             
             <article>
@@ -97,7 +101,7 @@
         </section>
     </main>
     <aside class="aside-one">
-        <h4>Meld deg inn i spællklubben</h4>
+        <h4 id="meld">Meld deg inn i spællklubben</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitt</p>
         <form>
             <label>
@@ -111,15 +115,24 @@
             <input type="checkbox" id="age-validation"/>
         </form>
     </aside>
-    <aside class="aside-two">
-        <h4>Send melding her</h4>
-        <p>Her kan du sende melding hvis du har noen spørsmål om spill, leverense eller returnering av ordre.</p>
-        <form>
+    <footer id="kontakt">
+        <p class="oss">Kontakt oss</p>
+        <form action="mailto:acnebelu@hiof.no" method="POST" enctype="text/plain">
+            <label  id="navn"><strong>Navn:</strong></label>
+            <textarea class="navn-box" placeholder="Skriv her..." style="resize: none;"></textarea>
 
-            <textarea class="melding-box" placeholder="Skriv her..."></textarea>
+            <label id ="email"><strong>Epost:</strong></label>
+            <textarea class="email-box" placeholder="Skriv her..." style="resize: none;"></textarea>
 
-                <input type="submit" value="Send">
-    </aside>
+            <label id ="tema"><strong>Tema:</strong></label>
+            <textarea class="tema-box" placeholder="Skriv her..." style="resize: none;"></textarea>
+
+            <label id ="melding"><strong>Melding:</strong></label>
+            <textarea class="melding-box" placeholder="Skriv her..." style="resize: none;"></textarea>
+
+            <button type="submit" class="btn" a href="mailto:acnebelu@hiof.no">Send</button>
+        </form>
+    </footer>
     <script>
     document.addEventListener('DOMContentLoaded', () => {
         const dropBtn = document.querySelector('.dropbtn');
@@ -127,20 +140,20 @@
         const subBtn = document.querySelector('.sub-btn');
         const subMenu = document.querySelector('.sub-menu');
 
-  // Toggle main dropdown
+  
         dropBtn.addEventListener('click', (e) => {
         e.stopPropagation(); 
         dropdownContent.classList.toggle('show');
         });
 
-  // Toggle sub-menu
+  
         subBtn.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
         subMenu.classList.toggle('show');
         });
 
-  // Close all dropdowns if clicking outside
+
         window.addEventListener('click', () => {
         dropdownContent.classList.remove('show');
         subMenu.classList.remove('show');
