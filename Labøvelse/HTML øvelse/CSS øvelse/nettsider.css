@@ -70,7 +70,7 @@ main {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 20px;
-    padding: 1rem
+    padding: 1rem;
 }
 
 article {
@@ -118,7 +118,7 @@ footer button{
 }
 
 .btn:hover {
-    background: #00264d;
+    background: #f0f0f0;
 }
 
 .google-btn {

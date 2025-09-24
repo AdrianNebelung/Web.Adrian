@@ -299,6 +299,10 @@ article {
         }
 }
 
+#section-top article {
+    justify-content: center;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;

@@ -175,7 +175,7 @@ input [type="submit"] {
         aside {
             position: center;
             top: 10rem;
-        }   
+        }
     }
 
 .section-mid {
@@ -242,18 +242,18 @@ article {
   justify-content: center;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-family: Arial, Helvetica, sans-serif;
+ table {
+                width: 100%;
+                border-collapse: collapse;
+                font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
-}
+            }
 
 th, td {
     padding: 12px 15px;
-    text-align: left;
+                text-align: left;
     border-bottom: 1px solid  #ddd;
-}
+            }
 
 th {
     background-color: #f4f4f4;
@@ -284,7 +284,8 @@ th {
     font-size: 20px;
     color: #00d1b2;
     text-decoration: none;
-    margin-left: 81px; 
+    margin-right: 100px; 
+    margin-left: 5px;
     display: flex;
 }
 
@@ -306,7 +307,7 @@ th {
   color: #00d1b2;
   font-size: 20px;
   border: none;
-  cursor: pointer;
+    cursor: pointer;
   border-radius: 5px;
 }
 
@@ -530,7 +531,7 @@ footer button{
     font-weight: bold;
     margin-top: 10px;
     transition: background 0.3s;
-}
+        }
 
 .btn:hover {
     background: #00264d;
