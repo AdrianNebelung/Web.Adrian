@@ -219,9 +219,8 @@ article {
         }
 }
 #section-top {
-  display: flex;
   flex-wrap: wrap;       
-  gap: 20px;             
+  gap: 20px;            
 }
 
 #section-top h2 {
@@ -472,6 +471,11 @@ th {
     color: #fff;
 }
 
+#payment {
+    background-color: #555;
+    color: #fff;
+}
+
 #close-cart:hover {
     background-color: #777;
 }
@@ -548,4 +552,20 @@ footer button{
 
 #sjangere {
     color:#00d1b2;
+}
+
+.deg {
+    display: inline-block;
+    background: #004080;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.deg:hover {
+    background-color: #00264d;
 }

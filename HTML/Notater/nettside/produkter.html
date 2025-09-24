@@ -41,6 +41,7 @@
             <ul id ="cart-items"></ul>
             <p><strong>Total:</strong> <span id="cart-total">0</span> kr</p>
             <button id ="close-cart">Lukk</button>
+            <p><button id ="payment">Betal</button></p>
             </div>
         </div>
     </header>
@@ -75,6 +76,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
                 <p>kr 499,-</p>
                 <a href="RDR2.html">Se produkt</a>
+                <button class="add-to-cart" data-name="" data-price="">Legg til i handlekurven</button>
             </article>
             <article id="article-four">
                 <img src="https://picsum.photos/id/237/200/300" alt ="Red Dead Redemption 2">
@@ -82,6 +84,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
                 <p>kr 499,-</p>
                 <a href="">Se produkt</a>
+                <button class="add-to-cart" data-name="" data-price="">Legg til i handlekurven</button>
             </article>
         </section>
 
@@ -204,8 +207,8 @@
     <br>
     <br>
         <section class="section-mid">
-            <h2 id ="katego">Kategorier</h2>
-            <p>Her finner du forskjellige kategorier vi har innenfor gaming.</p>
+            <h2 id ="sjangere">Sjangere</h2>
+            <p>Her finner du forskjellige sjangere vi har innenfor gaming.</p>
             
             <article>
                 <h3><a href="action.html">Action</a></h3>
@@ -225,7 +228,7 @@
         </section>
     </main>
     <aside class="aside-one">
-        <h4>Meld deg inn i spællklubben</h4>
+        <h4 id="meld">Meld deg inn i spællklubben</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitt</p>
         <form>
             <label>
@@ -233,22 +236,29 @@
             <input type="email" placeholder="ola.nordman@hiof.no...."/>
             </label>    
             
-            <input type="submit" value="Meld deg på"/>
+            <input type="submit" class="deg" value="Meld deg på"/>
 
             <label for="age-validation">Bekreft alder over 18</label>
             <input type="checkbox" id="age-validation"/>
         </form>
     </aside>
-    <aside class="aside-two">
-        <h4>Send melding her</h4>
-        <p>Her kan du sende melding hvis du har noen spørsmål om spill, leverense eller returnering av ordre.</p>
-        <form>
+    <footer id="kontakt">
+        <h4 class="oss">Kontakt oss</h4>
+        <form action="mailto:acnebelu@hiof.no" method="POST" enctype="text/plain">
+            <label  id="navn"><strong>Navn:</strong></label>
+            <textarea class="navn-box" placeholder="Skriv her..." style="resize: none;"></textarea>
 
-            <textarea class="melding-box" placeholder="Skriv her..."></textarea>
+            <label id ="email"><strong>Epost:</strong></label>
+            <textarea class="email-box" placeholder="Skriv her..." style="resize: none;"></textarea>
 
-                <input type="submit" value="Send">
-    </aside>
-    <div id="notification"></div>
+            <label id ="tema"><strong>Tema:</strong></label>
+            <textarea class="tema-box" placeholder="Skriv her..." style="resize: none;"></textarea>
 
+            <label id ="melding"><strong>Melding:</strong></label>
+            <textarea class="melding-box" placeholder="Skriv her..." style="resize: none;"></textarea>
+
+            <button type="submit" class="btn" a href="mailto:acnebelu@hiof.no">Send</button>
+        </form>
+    </footer>
 </body>
 </html>

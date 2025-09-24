@@ -40,6 +40,7 @@
                 <ul id ="cart-items"></ul>
                 <p><strong>Total:</strong> <span id="cart-total">0</span> kr</p> 
                 <button id ="close-cart">Lukk</button>
+                <p><button id="payment">Betal</button></p>
             </div>
             </div>
     </header>
@@ -119,14 +120,14 @@
             <input type="email" placeholder="ola.nordman@hiof.no...."/>
             </label>    
             
-            <input type="submit" value="Meld deg på"/>
+            <input type="submit" class="deg" value="Meld deg på"/>
 
             <label for="age-validation">Bekreft alder over 18</label>
             <input type="checkbox" id="age-validation"/>
         </form>
     </aside>
     <footer id="kontakt">
-        <p class="oss">Kontakt oss</p>
+        <h4 class="oss">Kontakt oss</h4>
         <form action="mailto:acnebelu@hiof.no" method="POST" enctype="text/plain">
             <label  id="navn"><strong>Navn:</strong></label>
             <textarea class="navn-box" placeholder="Skriv her..." style="resize: none;"></textarea>
