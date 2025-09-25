@@ -25,7 +25,6 @@ a {
     color: black;
     width: 100%;
 }
-
 #mainlogo {
     font-size: 2rem;
     font-weight: bold;
@@ -59,7 +58,7 @@ li {
 }
 
 .kontakt {
-    font-size: 2drem;
+    font-size: 2rem;
 }
 
 nav li a:hover {
