@@ -569,3 +569,33 @@ footer button{
 .deg:hover {
     background-color: #00264d;
 }
+
+#searchBar {
+    width: 300px;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.game {
+    padding: 10px;
+    margin: 5px;
+    background: #f3f3f3;
+    border-radius: 6px;
+}
+
+#results {
+  margin-top: 20px;
+}
+.game-card {
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fafafa;
+}
+.game-card h3 {
+  margin: 0;
+}
