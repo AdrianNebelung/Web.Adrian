@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lær om HTML</title>
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap" rel="stylesheet">
+
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+  <link rel="stylesheet" href="css/html.css">
+
+
+
+</head>
+<body>
+
+    <nav>
+      <div>
+      <img src = "" alt="logo">
+      </div>
+
+    <div class = "nav-icons">
+      <i class = "fa-solid fa-magnifying-glass" id = "search-toggle"></i>
+      
+      <div class = "search-wrapper" id = "search-box">
+        <input type = "text" placeholder = "Søk..." id = "search-input" />
+        <ul id = "suggestions"></ul>
+        </div>
+
+      <i class = "fa-solid fa-bars" id = "menu-toggle"></i>
+
+      <ul class ="menu-list" id = "menu-list">
+        <li><a href="Studieoppgave.html">Hjem</a></li>
+        <li><a href="omoss.html">Om Oss</a></li>
+        <li><a href="tjenester.html">Tjenester</a></li>
+        <li><a href="kontakt.html">Kontakt Oss</a></li>
+      </ul>
+      </div>
+    </nav>
+
+ 
+  <header class="hero">
+    <h1>På denne siden vil du lære om HTML og hvordan du skal skrive det. Vi kommer til å gå igjennom trinn for trinn hvordan man bygger opp en HTML-struktur. </h1>
+  </header>
+
+
+  <main>
+  
+    <section class="articles">
+        <img src="c:\Users\ac877\Downloads\html logo.png" class="img-placeholder">
+        <br>
+        <br>
+        <article data-keywords = "HTML">
+        <h2 id="innhold">HTML</h2>
+        <h5 style = "font-size: 20px; text-align: center;">Alle HTML-sider starter med en grunnleggende struktur: </h5>
+        <p id ="paragraf">
+            &lt;!doctype html &gt;
+            <br>
+            &lt;html lang = "no"&gt;
+            <br>
+            &lt;head&gt;
+            <br>
+                &lt;meta charset ="UTF-8"&gt;
+                <br>
+                &lt;title&gt;Min første nettside&lt;/title&gt;
+                <br>
+            &lt;/head&gt;
+            <br>
+            &lt;body&gt;
+            <br>
+                &lt;h1&gt;Hei, verden!&lt;/h1&gt;
+                <br>
+                &lt;p&gt;Dette er min første avsnitt i HTML.&lt;/p&gt;
+            <br>
+            &lt;/body&gt;
+            <br>
+            &lt;/html&gt;
+        </p>
+        </article>
+        <table id = "table">
+            <th>Nøkkelord:</th>
+            <tr><td>!doctype html</td></tr>
+            <tr><td>html</td></tr>
+            <tr><td>head</td></tr>
+            <tr><td>body</td></tr>
+        </table>
+        <br>
+        <h4 class="nøkkelord">!doctype</h4>
+        <p class="ord"></p>
+
+        <h4 class="nøkkelord">html</h4>
+        <p class="ord"></p>
+        
+        <h4 class="nøkkelord">head</h4>
+        <p class="ord"></p>
+        
+        <h4 class="nøkkelord">body</h4>
+        <p class="ord"></p>
+        
+        <section class = "exercise">
+        <form id = "ovelse">
+        <label for ="exercise-input">Øv her</label>
+
+        <textarea id = "ov-her" rows = "11" placeholder="Skriv koden her..."></textarea>
+        
+        <br>
+        <button type = "submit">Sjekk svaret!</button>
+
+        <p id = "feedback"></p>
+        </form>
+        </section>
+      </section>
+
+ 
+    <section class="icon-list">
+      <h2>Labore et dolore magna aliqua.</h2>
+
+      <article>
+        <i class="fa-solid fa-briefcase"></i>
+        <div>
+          <h3 id = "icon-innhold"></h3>
+          <p id = "icon-paragraf">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+        </div>
+      </article>
+
+      <article>
+        <i class="fa-duotone fa-solid fa-chart-simple"></i>
+        <div>
+          <h3 id = "icon-innhold"></h3>
+          <p id = "icon-paragraf">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+        </div>
+      </article>
+
+      <article>
+        <i class="fa-solid fa-globe"></i>
+        <div>
+          <h3 id = "icon-innhold"></h3>
+          <p id = "icon-paragraf">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Min nettside. Alle rettigheter reservert.</p>
+  </footer>
+  <script src="js/js.js"></script>
+</body>
+</html>

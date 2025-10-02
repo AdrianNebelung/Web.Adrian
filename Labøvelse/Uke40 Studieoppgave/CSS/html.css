@@ -88,7 +88,7 @@ i fa-solid fa-magnifying-glass {
 
 .hero {
   padding: 2rem 1.5rem;
-  align-items: center;  
+  text-align: left;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -120,7 +120,6 @@ i fa-solid fa-magnifying-glass {
 
 
 .articles {
-  display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
   padding: 2rem 1.5rem;
@@ -131,10 +130,39 @@ i fa-solid fa-magnifying-glass {
 #innhold {
   font-weight: bold;
   font-size: 50px;
+  text-align: center;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 250px;
+    margin-left: 60px;
+    background: #eee;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: 'Roboto', sans-serif;
+}
+
+table th {
+    background: black;
+    color: #fff;
+    text-align: left;
+    padding: 20px;
+    font-size: 16px;
+    text-align: center;
+}
+
+table td {
+    padding: 10px 12px;
+    border: 1px solid #eee;
+    font-weight: bold;
+    font-size: 20px; 
+    text-align: center;
 }
 
 #paragraf {
   font-size: 20px;
+  text-align: center;
 }
 
 
@@ -151,13 +179,14 @@ i fa-solid fa-magnifying-glass {
 }
 
 .img-placeholder {
-  display: flex;
   justify-content: center;
   align-items: center;
   height: 180px;
-  width: 100%;
-  margin-bottom: 20px;
-  right: 20px;
+  width: 200px;
+  justify-content: center;
+  display: flex;
+  margin: 0 auto 20px auto;
+  border-bottom: 1px solid #eee;
 }
 
 .articles h2 {
@@ -222,8 +251,6 @@ footer {
 
 @media (min-width: 768px) {
   .hero {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
     align-items: center;
     padding: 4rem 6rem;
   }
@@ -234,8 +261,6 @@ footer {
   }
 
   .articles {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
   
@@ -345,3 +370,66 @@ footer {
   background-color: #f0f0f0;
 }
 
+.nøkkelord {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.ord {
+  font-size: 16px;
+  text-align: center;
+}
+
+#øvelse {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;  
+}
+form {
+  margin-top: 15px;
+}
+
+label {
+  display: block;
+  margin: 5px 0 3px;
+}
+
+input, textarea {
+  width: 80%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+textarea {
+  text-align: center;
+  vertical-align: middle;
+  align-items: center;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button:hover {
+  background: black;
+}
+
+#checkbtn {
+  margin-top: 10px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#check-btn:hover {
+  background-color: #005fa3;
+}
+
+#feedback {
+  margin-top: 1rem;
+  font-weight: bold;
+}

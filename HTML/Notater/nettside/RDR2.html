@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="nb">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="stylesheetRDR2.css">
     <title>Forside - Dataspæll</title>
 </head>
 <body>
@@ -28,7 +29,11 @@
             </div>
             </div>
             <div id="produkter-container">
-                <a href="produkter.html" id="produk">Produkter</p>
+                <a href="produkter.html" id="produk">Produkter</a>
+            </div>
+            <div>
+                <input type="text" id="searchBar" placeholder="Søk Spill...">
+                <div id="results"></div>
             </div>
             <div id ="chart-container">
                 <a id="chart-icon">
@@ -39,23 +44,35 @@
                 <ul id ="cart-items"></ul>
                 <p><strong>Total:</strong> <span id="cart-total">0</span> kr</p> 
                 <button id ="close-cart">Lukk</button>
+                <p><button id="payment">Betal</button></p>
             </div>
             </div>
     </header>
     <section class="deal-section">
         <h2>Crazy gaming deals</h2>
         <br>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+        <p>Velkommen til våres nettside. På denne nettsiden selger vi spill til en billig penge. Vi har et stort utvalg av spill. Det er bare å kontakte oss hvis det skulle være noe, dette finner du helt nederst på nettsiden. Vi hjelper med returnering, frakt eller andre spørsmål. </p>
         <a href ="offers.html">Se tilbud</a> 
     </section>
-    <main>
+    <main id="gameList">
         <section id = "section-top">
-            <h2>Populære Spæll</h2>
+            <h2>Populære Spill</h2>
             <article>
                 <img src="https://image.api.playstation.com/cdn/UP1004/CUSA03041_00/Hpl5MtwQgOVF9vJqlfui6SDB5Jl4oBSq.png" alt ="Red Dead Redemption 2">
-                <h3>Red Dead Redemption 2</h3>
+                <h3 class="game" data-title="Red Dead Redemtion 2">Red Dead Redemption 2</h3>
                 <p><em>Red Dead Redemption 2, det storslåtte, kritikerroste åpen-verden-spillet fra Rockstar Games, og ikke minst det høyest vurderte av alle spill for seneste generasjon med konsoller, er nå forbedret for PC med nytt Story Mode-innhold, visuelle oppgraderinger og mer.</em></p>
                 <p>kr 499,-</p>
+                <h3>Informasjoner</h3>
+                <h5>Utgivelsesdato:</h5>
+                <p>5. Des. 2019</p>
+                <h5>Utvikler:</h5>
+                <p>Rockstar Games</p>
+                <h5>Utgiver:</h5>
+                <p>Rockstar Games</p>
+                <h5>Sjanger</h5>
+                <p>Action, Western</p>
+                <h5>Platform:</h5>
+                <p>PC, PS5, Xbox</p>
                 <a href="RDR2.html">Se produkt</a>
                 <button class="add-to-cart" data-name="Red Dead Redemtion 2" data-price="499">Legg til i handlekurven</button>
             </article>
@@ -94,14 +111,14 @@
             <input type="email" placeholder="ola.nordman@hiof.no...."/>
             </label>    
             
-            <input type="submit" value="Meld deg på"/>
+            <input type="submit" class="deg" value="Meld deg på"/>
 
             <label for="age-validation">Bekreft alder over 18</label>
             <input type="checkbox" id="age-validation"/>
         </form>
     </aside>
     <footer id="kontakt">
-        <p class="oss">Kontakt oss</p>
+        <h4 class="oss">Kontakt oss</h4>
         <form action="mailto:acnebelu@hiof.no" method="POST" enctype="text/plain">
             <label  id="navn"><strong>Navn:</strong></label>
             <textarea class="navn-box" placeholder="Skriv her..." style="resize: none;"></textarea>
@@ -230,6 +247,44 @@
             }
         });
     });
+       const games = [
+    {title: "Red Dead Redemption 2", genre: "Action, Western", platform: "PC, PS5, Xbox", description: "An open world western game."},
+    {title: "Elden Ring", genre: "RPG, Action", platform: "PC, PS5, Xbox", description: "Open world fantasy adventure."},
+    {title: "Cyberpunk 2077", genre: "Action RPG", platform: "PC, PS5, Xbox", description: "Futuristic open world."},
+    {title: "Minecraft", genre: "Sandbox", platform: "PC, Xbox, Switch", description: "Build and explore block worlds."}
+];
+
+const searchBar = document.getElementById("searchBar");
+const resultDiv = document.getElementById("results"); // make sure variable name matches
+
+searchBar.addEventListener("keyup", (e) => {
+    let searchText = e.target.value.toLowerCase();
+    resultDiv.innerHTML = ""; // clear previous results
+
+    const filtered = games.filter(game =>
+        game.title.toLowerCase().includes(searchText) ||
+        game.genre.toLowerCase().includes(searchText) ||
+        game.platform.toLowerCase().includes(searchText) ||
+        game.description.toLowerCase().includes(searchText)
+    );
+
+    if (filtered.length === 0) {
+        resultDiv.innerHTML = "<p>No games found.</p>";
+    } else {
+        filtered.forEach(game => {
+            resultDiv.innerHTML += `
+                <div class="game-card">
+                    <h3>${game.title}</h3>
+                    <p><strong>Genre:</strong> ${game.genre}</p>
+                    <p><strong>Platform:</strong> ${game.platform}</p>
+                    <p>${game.description}</p>
+                </div>
+            `;
+        });
+    }
+});
+
+
     </script>
 
 </body>

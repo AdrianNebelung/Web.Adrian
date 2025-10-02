@@ -31,7 +31,7 @@
             <div id="produkter-container">
                 <a href="produkter.html" id="produk">Produkter</a>
             </div>
-            <div>
+            <div id ="search-wrapper" style = "position: relative;">
                 <input type="text" id="searchBar" placeholder="Søk Spill...">
                 <div id="results"></div>
             </div>
@@ -268,11 +268,11 @@
 ];
 
 const searchBar = document.getElementById("searchBar");
-const resultDiv = document.getElementById("results"); // make sure variable name matches
+const resultDiv = document.getElementById("results"); 
 
 searchBar.addEventListener("keyup", (e) => {
     let searchText = e.target.value.toLowerCase();
-    resultDiv.innerHTML = ""; // clear previous results
+    resultDiv.innerHTML = ""; 
 
     const filtered = games.filter(game =>
         game.title.toLowerCase().includes(searchText) ||
