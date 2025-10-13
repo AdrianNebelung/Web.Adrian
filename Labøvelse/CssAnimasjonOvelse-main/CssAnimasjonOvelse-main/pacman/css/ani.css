@@ -1,0 +1,251 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+}
+main{
+    height: 600px;
+    width: 900px;
+    border: 11px double blue;
+    margin: 0 auto;
+    position: relative;
+}
+
+#left div, #right div{
+    border: 11px double blue;
+    position: absolute;
+}
+
+#left .corner-top{
+    position: absolute;
+    top:55px;
+    left:226px;
+    height: 150px;
+    width: 30px;
+}
+
+#left .corner-bottom{
+    position: absolute;
+    bottom: 55px;
+    left: 226px;
+    height: 150px;
+    width: 30px;
+}
+
+#left .small{
+    position: absolute;
+    width: 100px;
+    height: 30px;
+}
+
+#left .one{
+    top: 202px;
+    left: 107px;
+}
+
+#left .two{
+    bottom: 202px;
+    left: 107px;
+}
+
+#right .corner-top{
+    position: absolute;
+    right: 226px;
+    top: 55px;
+    height: 150px;
+    width: 30px;
+}
+
+#right .corner-bottom{
+    position: absolute;
+    right: 226px;
+    bottom:55px;
+    height: 150px;
+    width: 30px;
+}
+
+#right .small{
+    position: absolute;
+    width: 100px;
+    height: 30px;
+}
+
+#right .one{
+    top: 202px;
+    right: 107px;
+
+}
+
+#right .two{
+    bottom: 202px;
+    right:107px;
+
+}
+
+#middel{
+
+    position: absolute;
+    border: 11px double blue;
+    width: 30px;
+    top: 55px;
+    left: 420px;
+    height: 470px
+}
+
+.small {
+    width: 150px !important;
+}
+
+#life{
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+.fa-heart{
+    color: red;
+    font-size: 50px;
+}
+
+.fa-heart{
+    color: red;
+    font-size: 30px;
+}
+
+.fa-ghost{
+    font-size: 30px;
+    color: #ffdb1a;
+      position: absolute;
+      top: 282px;
+      left: 20px;
+      /*Animering*/
+      /*navn..........*/
+      /*varighet..........*/
+      /*rettning på animajonen..........*/
+      /*hva skjer når animasjon avsluttes..........*/
+      /*hvor mange ganger skal animasjonen gjentas..........*/
+      /*hvordan skal tiden være fordelt på animasjonen..........*/
+}
+
+/* STEG 1 – Lag en animasjonsfunksjon for spøkelset som beveger seg rundt banen.
+   Ta utgangspunkt i 0, 10, 20, 30, 40 … 100 når du setter keyframes. */
+
+   /*........*/ ghost {
+
+    /* START
+       Bruk startposisjonen definert i .fa-ghost (samme x og y som der). */
+    ... {
+      ....: ....;  /* x = startverdi fra .fa-ghost */
+      ....: ....;  /* y = startverdi fra .fa-ghost */
+    }
+  
+    /* TRINN 2
+       Beveg spøkelset HØYRE ca. 309px fra startposisjon.
+       Hold høyden (y) uendret. */
+    ... {
+      ....: ....;  /* x = start + ~309px */
+      ....: ....;  /* y = uendret */
+    }
+  
+    /* TRINN 3
+       Behold x uendret (samme som forrige trinn).
+       Beveg OPP ca. 270px (fra midthøyde til øverste løype). */
+    ... {
+      ....: ....;  /* x = uendret */
+      ....: ....;  /* y = opp ~270px */
+    }
+  
+    /* TRINN 4
+       Beveg HØYRE ca. 192px langs øverste løype.
+       Hold y uendret (fortsatt øverst). */
+    ... {
+      ....: ....;  /* x = forrige + ~192px */
+      ....: ....;  /* y = uendret (øverst) */
+    }
+  
+    /* TRINN 5
+       Behold x uendret.
+       Beveg NED ca. 270px tilbake til midthøyde. */
+    ... {
+      ....: ....;  /* x = uendret */
+      ....: ....;  /* y = ned ~270px (til midthøyde) */
+    }
+  
+    /* TRINN 6
+       Beveg HØYRE ca. 299px langs midthøyden til høyre side.
+       Hold y uendret. */
+    ... {
+      ....: ....;  /* x = forrige + ~299px */
+      ....: ....;  /* y = uendret (midthøyde) */
+    }
+  
+    /* TRINN 7
+       Behold x uendret (ytterst til høyre).
+       Beveg NED ca. 256px til nederste løype. */
+    ... {
+      ....: ....;  /* x = uendret (helt til høyre) */
+      ....: ....;  /* y = ned ~256px (nederste løype) */
+    }
+  
+    /* TRINN 8
+       Beveg VENSTRE ca. 493px langs nederste løype.
+       Hold y uendret (nederst). */
+    ... {
+      ....: ....;  /* x = forrige − ~493px */
+      ....: ....;  /* y = uendret (nederst) */
+    }
+  
+    /* TRINN 9
+       Behold x uendret (indre venstreside).
+       Beveg OPP ca. 256px tilbake til midthøyde. */
+    ... {
+      ....: ....;  /* x = uendret (indre venstre) */
+      ....: ....;  /* y = opp ~256px (midthøyde) */
+    }
+  
+    /* TRINN 10
+       Beveg VENSTRE ca. 307px tilbake mot startens venstreposisjon.
+       Hold y uendret (midthøyde). */
+    ... {
+      ....: ....;  /* x = forrige − ~307px (tilbake mot start-x) */
+      ....: ....;  /* y = uendret (midthøyde) */
+    }
+  
+    /* TRINN 11 (slutten av runden)
+       Beveg HØYRE ca. 307px til «indre venstreside» (mellompunkt før neste runde).
+       Hold y uendret (midthøyde). */
+    ... {
+      ....: ....;  /* x = forrige + ~307px (indre venstre) */
+      ....: ....;  /* y = uendret (midthøyde) */
+    }
+  }
+  
+  /* Husk:
+     – Legg animasjonen på .fa-ghost (name, duration, iteration-count, direction, timing-function, fill-mode).
+     – Fargeanimasjonen (ani-color) lages som egen @keyframes og kan kjøres parallelt. */
+  
+/*BONUS*/
+/*Få pacman til å jage, eller gå i en rute som går i mot ghost*/
+/*#pacman{
+
+    background-image: url('../img/eat.png');
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    transform: rotate(30deg);
+    animation-name: .....;
+    animation-duration: 0.4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+..... pacman{
+    from{
+        background-image: url('../img/eat.png');
+    }
+    to{
+        background-image: url('../img/close.png');
+    }
+}*/
