@@ -1,0 +1,14 @@
+.flex, .flex-column {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+body {
+  margin: 0;
+  font-family: "arial", sans-serif;
+  color: #393737;
+}/*# sourceMappingURL=main.css.map */
