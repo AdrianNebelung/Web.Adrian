@@ -13,7 +13,7 @@ body {
 
 h1, h2, h3 {
   font-family: "Poppins", sans-serif;
-  color: #2a9d8f;
+  color: #000000;
 }
 
 #welcome-banner header .btn {
@@ -47,7 +47,7 @@ nav {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: #2a9d8f;
+  background: rgb(43, 0, 255);
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   padding: 0.8rem 0;
@@ -66,7 +66,7 @@ nav ul li a {
   font-size: 1.4rem;
 }
 nav ul li a:hover {
-  color: rgb(90.1105527638, 210.8894472362, 196.1859296482);
+  color: #333333;
 }
 
 #welcome-banner {
