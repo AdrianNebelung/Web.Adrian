@@ -1,0 +1,165 @@
+:root {
+	--primary-color: #2563eb;
+	--secondary-color: #1e293b;
+	--light-bg: #f8fafc;
+	--accent: #38bdf8; 
+	--text-color: #0f172a;
+	--max-width: 1200px;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Inter", Arial, sans-serif;
+	color: var(--text-color);
+	background-color: var(--light-bg);
+	line-height: 1.6;
+	margin: 0;
+	padding: 0;
+}
+
+header, main, aside, footer {
+	margin: 0 auto;
+	max-width: var(--max-width);
+	padding: 1.5rem;
+}
+
+aside {
+	text-align: center;
+}
+
+footer {
+	text-align: center;
+}
+
+header {
+	text-align: center;
+	background-color: white;
+	border-bottom: 3px solid var(--primary-color);
+}
+
+header h1 {
+	font-size: 2rem;
+	margin-bottom: 0.5rem;
+	color: var(--primary-color);
+}
+
+header p {
+	max-width: 700px;
+	margin: 0.5rem auto;
+	color: var(--secondary-color);
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--primary-color);
+	color: white;
+	padding: 0.75rem 1.5rem;
+	flex-wrap: wrap;
+}
+
+nav .logo h2 {
+	margin: 0;
+	font-size: 1.25rem;
+}
+
+.menu-button {
+	background: none;
+	border: none;
+	color: white;
+	font-size: 1.5rem;
+	display: none;
+	cursor: pointer;
+}
+
+.top-menu {
+	display: flex;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.top-menu li {
+	margin: 0 1rem;
+	position: relative;
+}
+
+.top menu a, .dropdown-toggle {
+	color: var(--primary-color);
+	text-decoration: none;
+	font-weight: 500;
+}
+
+.top-menu a:hover, .dropdown-toggle:hover {
+	text-decoration: underline;
+}
+
+.dropdown-main {
+	display: none;
+	position: absolute;
+	top: 2rem;
+	left: 0;
+	background-color: white;
+	color: var(--text-color);
+	list-style: none;
+	padding: 0 5rem 0;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+	border-radius: 8px;
+}
+
+#artikkel1, #artikkel2, #artikkel3 {
+	text-align: center;
+}
+
+nav li a {
+	color: white;
+	text-decoration: none;
+}
+
+ul.eksterne{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	font-size: 20px;
+}
+
+@media (max-width) {
+	.top-menu {
+		display: none;
+		flex-direction: column;
+		width: 100%;
+		background-color: var(--primary-color);
+	}
+
+	.top-menu.active {
+		display: flex;
+	}
+
+	.top-menu li {
+		text-align: center;
+		margin: 0.75rem 0;
+	}
+
+	header h1 {
+		font-size: 1.5rem;
+	}
+
+	header p {
+		font-size: 0.95rem;
+		padding: 0.1rem;
+	}
+}
+
+@media (min-width: 480px) {
+	body {
+		font-size: 0.9rem;
+	}
+
+	header, main, aside, footer {
+		padding: 1rem;
+	}
+}
