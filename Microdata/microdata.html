@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Kjøp Shosies Pink Runners - komfertable og stilige joggesko for kvinne. Gratis frakt og enkel retur.">
+    <meta name="keywords" content="Shosies, pink runners, joggesko, damesko, løpesko, sneakers, rosa sko">
+    <meta name="author" content="Shosies AS">
+
+
+    <link rel ="stylesheet" href="CSS/styles.css">
+    <title>Shosies - Pink runners</title>
+</head>
+<body>
+  <div grid="grid-container">
+    <header>
+        <from>
+            <input type="search" placeholder="Cool shoes..." title="Search">
+            <button type="submit" title="Søk etter"><i class="fa solid  fa-magnifying-glass"></i></button> 
+        </from>
+
+        <img src="IMG/logo1.png" alt="header logo" id="logo">
+
+        <section>
+            <a href="#">Sign in </a>
+            <i class="fa-solid fa-chart-shopping"></i>
+        </section>
+    </header>
+    
+    <nav id="global-nav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Children</a></li>
+            <li><a href="#">Sale</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <nav id="breadcrums">
+            <ul>
+                <li>
+                    <a href="index.html">Home </a>
+                </li>
+
+                <li>
+                    <a href="index.html">Rinning shoes </a>
+                </li>
+
+                <li>
+                    <a href="index.html">Pink runners </a>
+                </li>
+            </ul>
+        </nav>
+
+        <figure class="left-content-container flex-items">
+            <img src ="IMG/pink-shoes.jpeg" alt = "Rosa joggesko fra merket Shosies" id="active-img" itemprop="image">
+            <img src ="IMG/pink-shoes.jpeg" alt = "Rosa joggesko fra merket Shosies" itemprop="image">
+            <img src ="IMG/pink-shoes.jpeg" alt = "Rosa joggesko fra merket Shosies" itemprop="image">
+            <img src ="IMG/pink-shoes.jpeg" alt = "Rosa joggesko fra merket Shosies" itemprop="image">   
+        </figure>
+
+        <section class="right-content-container flex-items" itemscope itemtype="https://schema.org/Product">
+            <span id="brand-name" itemprop="brand" itemscope itemtype="https://schema.org/Brand">
+               <a href="#" itemprop="name">Shosies</a>
+            </span>
+
+            <h3 itemprop="name">Pink runners</h3>
+            <span itemprop="price" content="1499.00">1499,00 kr</span>
+            <meta itemprop ="priceCurrency" content="NOK">
+            <link itemprop="availability" href="https://schema.org/InStock">
+            <p itemprop="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati</p>
+
+            <form>
+                <label for="size">Size:</label>
+                <select name="size"id="size">
+                    <option value="36">36</option>
+                    <option value="37">37</option>
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                    <option value="41">41</option>
+                </select>
+                <button>Add to chart</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        &copy Best shoes 4ever 2023
+    </footer>
+  </div>  
+</body>
+</html>
